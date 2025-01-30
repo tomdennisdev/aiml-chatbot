@@ -1,0 +1,219 @@
+<aiml version="1.0.1" encoding="UTF-8">
+
+<!-- Greetings and Politeness -->
+<category> <pattern> HELLO </pattern>
+  <template>Hello! How are you?</template> </category>
+
+<category> <pattern> HELLO * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HI * </pattern>
+  <template><srai>HELLO</srai></template> </category>
+
+<category> <pattern> HOW ARE YOU </pattern>
+  <template>I'm functioning within normal parameters, thanks for asking.</template></category>
+
+<category><pattern> I AM FINE </pattern>
+  <template>That's good to know. What would you like to discuss about?</template></category>
+
+<category><pattern> BYE </pattern>
+  <template>#0$Bye! Nice talking to you. You take care now.</template></category>
+
+<category><pattern> GOODBYE </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category><pattern> EXIT </pattern>
+  <template><srai>BYE</srai></template></category>
+
+<category> <pattern> THANKS </pattern>
+  <template>You are welcome.</template></category>
+
+<category> <pattern> THANK YOU </pattern>
+  <template><srai>THANKS</srai></template></category>
+
+<category> <pattern> CHEERS </pattern>
+  <template>Sure mate.</template></category>
+
+<category> <pattern> CHEERS * </pattern>
+  <template>Sure mate.</template></category>
+
+<!-- Weather API -->
+<category><pattern> WHAT IS THE WEATHER LIKE IN * </pattern>
+  <template>#2$<star/></template></category>
+
+<category><pattern> HOW IS THE WEATHER IN * </pattern>
+  <template><srai>WHAT IS THE WEATHER LIKE IN <star/></srai></template></category>
+
+<!--- Wikipedia API -->
+<category><pattern> WHAT IS A * </pattern>
+  <template>#1$<star index="1"/></template></category>
+
+<category><pattern> WHAT IS AN * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> WHAT IS * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> DEFINE * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+<category><pattern> WHO IS * </pattern>
+  <template><srai>WHAT IS A <star/></srai></template></category>
+
+
+
+<!-- Clash Royale FAQs -->
+
+<category> <pattern> HOW MANY TROPHIES DO YOU NEED TO REACH LEGENDARY ARENA </pattern>
+  <template>You need 9000 trophies.</template> </category>
+
+  <category> <pattern> WHEN WAS CLASH ROYALE RELEASED </pattern>
+  <template>Clash Royale was released on the 2nd of March, 2016.</template> </category>
+
+<category> <pattern> HOW MANY CARDS ARE IN A DECK </pattern>
+  <template>There are eight cards in a deck.</template> </category>
+
+<category> <pattern> WHAT IS THE MOST EXPENSIVE CARD </pattern>
+  <template>The most expensive card is Three Musketeers, which costs nine elixir. Technically they can cost ten elixir if they are used with the Mirror spell.</template> </category>
+
+<category> <pattern> WHICH COMPANY DEVELOPED CLASH ROYALE </pattern>
+  <template>Clash Royale is developed by Supercell.</template> </category>
+
+<category> <pattern> WHAT IS THE CHEAPEST CARD </pattern>
+  <template> The cheapest cards are the Skeletons, Ice Spirit, Fire Spirit, Electro Spirit, and Heal Spirit, all of which cost 1 Elixir. </template> </category>
+
+<category> <pattern> HOW MUCH DOES A MOUNTAIN OF GEMS COST </pattern>
+  <template>A Mountain of Gems (14,000 Gems) is £99.99.</template> </category>
+
+<category> <pattern> WHAT IS THE LATEST EVOLUTION </pattern>
+  <template>The most recent card evolution to be released is the Wall Breakers, which were released on the 14th of February, 2023.</template> </category>
+
+<category> <pattern> WHAT IS THE MAXIMUM AMOUNT OF GOLD </pattern>
+  <template>The maximum amount of Gold is 5,000,000.</template> </category>
+
+<category> <pattern> HOW MUCH DOES DIAMOND PASS ROYALE COST </pattern>
+  <template>The Diamond Pass costs £11.99. </template> </category>
+
+<!-- Clash Royale API calls -->
+
+<category><pattern> GET INFO ON * </pattern>
+  <template>#10$<star index="1"/></template></category>
+
+<category><pattern> TELL ME ABOUT * </pattern>
+  <template>#10$<star index="1"/></template></category>
+
+  <!-- Add to KB -->
+<category><pattern> I KNOW THAT * IS *</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> I KNOW THAT * IS A *</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> I KNOW THAT THE * IS *</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> I KNOW THAT THE * IS A *</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> I KNOW THAT * IS * CARD</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> I KNOW THAT * IS A * CARD</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> I KNOW THAT THE * IS * CARD</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> I KNOW THAT THE * IS A * CARD</pattern>
+  <template>#31$<star index="1"/> is <star index="2"/></template></category>
+
+<!-- Check KB -->
+
+<category><pattern> CHECK THAT * IS *</pattern>
+  <template>#60$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> CHECK THAT * IS A *</pattern>
+  <template>#60$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> CHECK THAT THE * IS *</pattern>
+  <template>#60$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> CHECK THAT THE * IS A *</pattern>
+  <template>#60$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> CHECK THAT * IS * CARD</pattern>
+  <template>#60$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> CHECK THAT * IS A * CARD</pattern>
+  <template>#60$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> CHECK THAT THE * IS * CARD</pattern>
+  <template>#60$<star index="1"/> is <star index="2"/></template></category>
+
+<category><pattern> CHECK THAT THE * IS A * CARD</pattern>
+  <template>#60$<star index="1"/> is <star index="2"/></template></category>
+
+<!-- Play game -->
+
+<category><pattern> PLAY A GAME</pattern>
+  <template>#65$</template></category>
+
+<category><pattern> PLAY THE GAME</pattern>
+  <template>#65$</template></category>
+
+<!-- Ask KB -->
+<category><pattern> IS * A *</pattern>
+  <template>#70$<star index="1"/> a <star index="2"/></template></category>
+
+<category><pattern> IS * A * ?</pattern>
+  <template>#70$<star index="1"/> a <star index="2"/></template></category>
+
+<category><pattern> IS THE * A *</pattern>
+  <template>#70$<star index="1"/> a <star index="2"/></template></category>
+
+<category><pattern> IS THE * A * ?</pattern>
+  <template>#70$<star index="1"/> a <star index="2"/></template></category>
+
+<category><pattern> IS * A * CARD</pattern>
+  <template>#70$<star index="1"/> a <star index="2"/></template></category>
+
+<category><pattern> IS * A * CARD ?</pattern>
+  <template>#70$<star index="1"/> a <star index="2"/></template></category>
+
+<category><pattern> IS THE * A * CARD</pattern>
+  <template>#70$<star index="1"/> a <star index="2"/></template></category>
+
+<category><pattern> IS THE * A * CARD ?</pattern>
+  <template>#70$<star index="1"/> a <star index="2"/></template></category>
+
+<!-- Image classification -->
+
+<category><pattern> WHAT IS THIS IMAGE</pattern>
+  <template>#80$</template></category>
+
+<category><pattern> WHAT IS THIS</pattern>
+  <template>#80$</template></category>
+
+<category><pattern> IS THIS A KNIGHT OR A BISHOP?</pattern>
+  <template>#80$</template></category>
+
+<category><pattern> IS THIS A KNIGHT OR A BISHOP</pattern>
+  <template>#80$</template></category>
+
+<category><pattern> CLASSIFY THIS IMAGE FOR ME</pattern>
+  <template>#80$</template></category>
+
+<!-- Image generation -->
+
+<category><pattern> GENERATE AN IMAGE OF * </pattern>
+  <template>#90$<star index="1"/></template></category>
+
+
+<!-- Default reaction -->
+<category><pattern> * </pattern>
+  <template>#99$<star index="1"/></template></category>
+
+</aiml>
