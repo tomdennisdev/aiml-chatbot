@@ -13,11 +13,10 @@ Project Structure
 aiml-chatbot/
 │── src/                     # Main source code
 │   ├── chatbot.py           # Main chatbot script
+│   ├── conversation_capabilities/
 │   ├── logical_reasoning/
 │   ├── image_classification/
-│   ├── patterns.xml         # AIML patterns
-│── data/                    # Knowledge base and models
-│── tests/                   # Unit tests
+│── data/                    # Knowledge base, models, aiml patterns
 │── requirements.txt         # Dependencies
 │── README.md                # Documentation
 │── LICENSE                  # Open-source license
